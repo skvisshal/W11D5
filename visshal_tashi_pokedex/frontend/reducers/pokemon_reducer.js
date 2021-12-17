@@ -1,7 +1,6 @@
 import {RECEIVE_ALL_POKEMON} from "../actions/pokemon_actions"
 
 const pokemonReducer = (state={}, action) => {
-    debugger
     Object.freeze(state);
     const nextState = Object.assign({}, state);
     switch(action.type) {
