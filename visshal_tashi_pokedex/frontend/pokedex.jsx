@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const store = configureStore();
     window.fetchAllPokemon = fetchAllPokemon;
     window.receiveAllPokemon = receiveAllPokemon;
-    const getSuccess = pokemon => console.log(receiveAllPokemon(pokemon));
+    const getSuccess = pokemon => store.dispatch(receiveAllPokemon(pokemon));
     fetchAllPokemon().then(getSuccess);
     //console.log(store.getState())
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    ReactDOM.render(<Root store = {store} />, root)
+    ReactDOM.render(<Root store ={store} />, root)
 })
